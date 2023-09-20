@@ -1,0 +1,512 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #667db6;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+
+/* Login Page Stylings */
+.login{
+    display: flex;
+    background-image: url(pngwing.com.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 500px;
+}
+
+.login-left{
+    background-color: rgba(0, 0, 0, 0.404);
+    width: 50vw;
+    height: 100vh;
+}
+.login-right{
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px auto;
+
+}
+.login-body h3{
+    text-align: center;
+}
+.login-body h5{
+    margin-top: 10px;
+    font-size: 17px;
+}
+.form form{
+    display: flex;
+    flex-direction: column;
+}
+.form input{
+    padding: 10px;
+    width: 17vw;
+    margin: 10px 0px 5px;
+    border-style: none;
+    border-radius: 5px;
+    box-shadow: 2px 1px 1px 1px black;
+    background-color: rgba(0, 0, 0, 0.525);
+    color: aliceblue;
+}
+
+.login-body button{
+    justify-content: flex-end;
+    background-color: #f7f701b3;
+    border-style: none;
+    box-shadow: 2px 1px 1px 1px black;
+    width: 7vw;
+    font-size: 17px;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 20px auto;
+}
+.section-title {
+    font-size: 24px;
+    margin: 20px;
+    color: #333;
+}
+
+/* Main Page stylings */
+
+.main-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.fa-house{
+    margin: 5px 2px 10px;
+    color: rgba(0, 4, 114, 0.585);
+}
+.fa-house:hover{
+    color: black;
+}
+.left-side {
+    background-color: #f4f4f462;
+    padding: 20px;
+    width: 250px;
+    border-radius: 5px;
+    margin-right: 2px;
+    height: 30vh;
+}
+
+.left-menu {
+    list-style: none;
+    padding: 0;
+}
+
+.left-menu li {
+    width: 7vw;
+    font-size: 15px;
+    margin-bottom: 10px;
+    padding: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.left-side ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+
+
+.left-menu li:hover {
+    background-color: #0b00004d;
+    border-radius: 3px;
+}
+
+.right-side {
+    background-color: #f9f9f940;
+    flex: 1;
+    padding: 3px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.dynamic-wish{
+    display: flex;
+    justify-content: space-between;
+}
+.right-side h3{
+    text-align: end;
+    margin-top: 20px;
+    margin-right: 10px;
+    font-size: 17px;
+}
+#greet, #fav-greet, #date{
+    margin: 10px 15px;
+    font-size: 18px;
+    font-weight: 600;
+}
+.right-lower{
+    display: flex;
+    justify-content: center;
+}
+.card-container{
+    margin: 15px 5px 10px;
+}
+.card-container:hover{
+    box-shadow: 2px 2px 10px 1px black;
+}
+.song-poster{
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+.song-poster img{
+    margin:  auto;
+    width: 150px;
+    height: 150px;
+}
+.song-details{
+    margin: 10px;
+}
+
+.song-details h2{
+    margin: 10px 9px 5px 0px;
+    justify-content: center;
+    font-size: 15px;
+    text-wrap: wrap;
+    width: 9vw;
+}
+.song-details h3{
+    margin: 5px 3px 5px 0px;
+    font-size: 13px;
+    text-align: left;
+    color: rgb(2, 2, 100);
+}
+
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    width: 85vw;
+    height: 10vh;
+    background-color: #00000077;
+    display: none;
+}
+.playing-song-image{
+    margin: 5px;
+}
+.playing-song-image img{
+    width: 70px;
+    height: 70px;
+}
+.control-bars{
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.control-buttons{
+    display: flex;
+    justify-content: center;
+}
+.fa-backward, .fa-play,.fa-pause, .fa-forward{
+    margin: 5px 10px;
+    font-size: 20px;
+    color: black;
+}
+.fa-backward:hover, .fa-play:hover, .fa-forward:hover{
+    color: gold;
+}
+.bar{
+    width: 50vw;
+    height: 0.5vh;
+    background-color: rgb(0, 221, 255);
+}
+.barpercentage{
+    width: 20vw;
+    height: inherit;
+    background-color: rgb(0, 0, 0);
+}
+.user-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    margin: 10px;
+}
+.fa-volume-high, .fa-heart, .fa-volume-off{
+    margin: 10px;
+    font-size: 20px;
+}
+.fa-heart{
+    color: gold;
+}
+.fa-volume-high, .fa-volume-off{
+    color: black;
+}
+
+.fa-volume-high:hover, .fa-volume-off:hover{
+    color: white;
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 576px) {
+
+    .login{
+        display: flex;
+        flex-direction: column-reverse;
+        background-image: url(pngwing.com.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 200px;
+        height: 100vh;
+    }
+    
+    .login-left{
+        background-color: rgba(0, 0, 0, 0);
+    }
+    .login-right{
+        height: inherit;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 30px auto;
+    }
+    .login-body h3{
+        text-align: center;
+    }
+    .login-body h5{
+        margin: 20px 40px 5px;
+        font-size: 17px;
+    }
+    .form form{
+        display: flex;
+        flex-direction: column;
+        width: 90vw;
+        justify-content: center;
+        margin: auto;
+    }
+    .form input{
+        padding: 10px;
+        width:70vw;
+        margin: 10px auto;
+        border-style: none;
+        border-radius: 5px;
+        box-shadow: 2px 1px 1px 1px black;
+        background-color: rgba(0, 0, 0, 0.525);
+        color: aliceblue;
+    }
+    
+    .login-body button{
+        justify-content: flex-end;
+        background-color: #0c0c0091;
+        border-style: none;
+        box-shadow: 2px 1px 1px 1px black;
+        color: white;
+        width: 20vw;
+        font-size: 17px;
+        padding: 10px;
+        border-radius: 5px;
+        margin: 20px auto;
+    }
+    .section-title {
+        font-size: 24px;
+        margin: 20px;
+        color: #333;
+    }
+    
+    /* Main Page stylings */
+    
+    .main-section {
+        display: flex;
+        flex-direction:column;
+        /* flex-wrap: wrap; */
+        justify-content: space-between;
+        padding: 10px;
+    }
+    .fa-house{
+        margin: 5px 2px 10px;
+        color: rgba(0, 4, 114, 0.585);
+    }
+    .fa-house:hover{
+        color: black;
+    }
+    .left-side {
+        display: none;
+        flex-direction: column;
+        background-color: #f4f4f462;
+        padding: 20px;
+        width: 75vw;
+        border-radius: 5px;
+        margin: 20px auto;
+        height: 10vh;
+    }
+    
+    .left-menu {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        gap: 35px;
+    }
+    
+    .left-menu li {
+        width: 7vw;
+        font-size: 15px;
+        margin-bottom: 10px;
+        padding: 3px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    .left-side ul li a {
+        text-decoration: none;
+        color: black;
+    }
+    
+    
+    
+    .left-menu li:hover {
+        background-color: #0b00004d;
+        border-radius: 3px;
+    }
+    
+    .right-side {
+        background-color: #f9f9f940;
+        flex: 1;
+        padding: 3px;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+    }
+    .dynamic-wish{
+        display: flex;
+        justify-content: space-between;
+    }
+    .right-side h3{
+        text-align: end;
+        margin-top: 20px;
+        margin-right: 10px;
+        font-size: 17px;
+    }
+    #greet, #fav-greet, #date{
+        margin: 10px 15px;
+        font-size: 15px;
+        font-weight: 600;
+    }
+    .right-lower {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around; /* Center the card containers */
+    }
+    .card-container{
+        width: 21vw;
+    }
+    .song-poster {
+        width: 100%; /* Full width for song posters */
+        justify-content: center;
+    }
+
+    .song-poster img {
+        width: 80px; /* Reduce image size for smaller screens */
+        height: 80px;
+    }
+
+    .song-details h2 {
+        font-size: 13px; /* Adjust font size for smaller screens */
+        width: 20vw; /* Full width for song titles */
+        margin: 5px 0px;
+        text-wrap: wrap;
+    }
+
+    .song-details h3 {
+        font-size: 6px; /* Adjust font size for smaller screens */
+        width: 20vw;
+        margin: 5px 0;
+        text-align: left;
+    }
+    
+    
+    .footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto;
+        width: 90vw;
+        height: 7vh;
+        background-color: #00000077;
+        display: none;
+    }
+    .playing-song-image{
+        margin: 5px;
+    }
+    .playing-song-image img{
+        width: 50px;
+        height: 50px;
+    }
+    .control-bars{
+        margin: 5px;
+        display: flex;
+        flex-direction: column;
+    }
+    .control-buttons{
+        display: flex;
+        justify-content: center;
+    }
+    .fa-backward, .fa-play,.fa-pause, .fa-forward{
+        margin: 5px 10px;
+        font-size: 17px;
+        color: black;
+    }
+    .fa-backward:hover, .fa-play:hover, .fa-forward:hover{
+        color: gold;
+    }
+    .bar{
+        width: 50vw;
+        height: 0.5vh;
+        background-color: rgb(0, 221, 255);
+    }
+    .barpercentage{
+        width: 20vw;
+        height: inherit;
+        background-color: rgb(0, 0, 0);
+    }
+    .user-buttons{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+        margin: 10px;
+    }
+    .fa-volume-high, .fa-heart, .fa-volume-off{
+        font-size: 15px;
+        margin: 10px;
+        font-size: 20px;
+    }
+    .fa-heart{
+        color: gold;
+    }
+    .fa-volume-high, .fa-volume-off{
+        color: black;
+    }
+    
+    .fa-volume-high:hover, .fa-volume-off:hover{
+        color: white;
+    }
+    
+}
+
+
